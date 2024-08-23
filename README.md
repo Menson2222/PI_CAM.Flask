@@ -11,12 +11,12 @@
    - Dùng để ghi tệp ảnh phần mềm vào thẻ nhớ.
    - Tải ở link sau: https://balenaetcher.en.download.it
 2. Phần mềm dò địa chỉ IP mạng, mình dùng: Advanced IP Scanner (dành cho Win):
-   (Hoặc các bạn có thể dùng phần mềm dò IP bằng điện thoại cũng đều được)
+   _(Hoặc các bạn có thể dùng phần mềm dò IP bằng điện thoại cũng đều được)_
    - Dùng để tìm địa chỉ IP của Orange Pi để có thể dùng công cụ SSH để điều khiển từ xa.
    - LƯU Ý: Các bạn nhớ giúp mình số MAC của pi, vì số này sẽ không thay đổi khi các bạn tìm IP.
    - Tải ở link sau: https://www.advanced-ip-scanner.com/vi/   
 4. Phần mềm MobaXterm (hỗ trợ nhiều giao thức điều khiển không dây, VD: VNC, SSH,...):
-   (Hoặc các bạn có thể dùng Windows PowerShell chạy với quyền quản trị viên cho tiện)
+   _(Hoặc các bạn có thể dùng Windows PowerShell chạy với quyền quản trị viên cho tiện)_
    - Sử dụng công cụ SSh để điều khiển PI, đồng thời cũng hỗ trợ chuyển tệp, xóa tệp một các dễ dàng.
    - Tải ở link sau: https://mobaxterm.mobatek.net
    
@@ -27,7 +27,7 @@
       - Sau khi tải về, giải nén ra, có 1 file dạng đuôi .img. Đây chính là file ảnh của hệ điều hành.
       - Dùng phần mềm balenaEtcher để ghi vào thẻ nhớ bằng cách chọn tệp ảnh -> chọn ổ đĩa -> tiến hành Flash.
       - Sau khi Flash, rút thẻ nhớ và cắm vào Orange PI
-2. Dò địa chỉ IP của Orange PI (Lưu ý: Nhớ địa chỉ MAC):
+2. Dò địa chỉ IP của Orange PI (_Lưu ý: Nhớ địa chỉ MAC_):
       - Cắm nguồn, dây mạng cho Pi và đợi Pi khởi động.
       - Để ý 2 led trên cổng LAN nhấp nháy là đã nhận mạng, sau đó tắt.
       - Dùng phần mềm Advanced IP Scanner để SCAN tìm IP của Orange PI (*Ảnh minh họa).
@@ -36,4 +36,4 @@
 3. Tiến hành SSH vào Orange Pi bằng MobaXterm:
       - Mở MobaXterm, chọn Start local Terinal. 
       ![image](https://github.com/user-attachments/assets/392dafa7-eb93-4d2c-a6c8-f39268bd596c)
-      - Dùng lệnh: *ssh root@192.168.xxx.xxx* để 
+      - Dùng lệnh: 'ssh root@192.168.xxx.xxx' để 
