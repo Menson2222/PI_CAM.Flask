@@ -39,5 +39,4 @@
       - Dùng lệnh: `ssh root@192.168.xxx.xxx` để ssh vào PI (_Thay thế IP vào nhé!_)
       - Sau khi SSH sẽ hiện ra ảnh sau:
 4. Cấu hình wifi cho Pi để Pi tự động kết nối lần sau mà không cần cáp mạng:
-      -  
-5. Tải các gói cài đặt cần thiết cho Orange Pi:
+6. Tải các gói cài đặt cần thiết cho Orange Pi:
