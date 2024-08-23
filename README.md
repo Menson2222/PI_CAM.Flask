@@ -21,13 +21,13 @@
    - Tải ở link sau: https://mobaxterm.mobatek.net
    
 *****************************Tiến hành:*****************************
-BƯỚC 1: Cài đặt hệ điều hành cho Orange Pi
+1. Cài đặt hệ điều hành cho Orange Pi:
       - Vào trang sau: https://www.armbian.com/orange-pi-zero/  để tải hệ điều hành cho Orange Pi.
       - Vì Orange Pi Zero ko có bản desktop nên bạn có thể tùy chọn tải về Ubuntu hoặc Debian. 
       - Sau khi tải về, giải nén ra, có 1 file dạng đuôi .img. Đây chính là file ảnh của hệ điều hành.
       - Dùng phần mềm balenaEtcher để ghi vào thẻ nhớ bằng cách chọn tệp ảnh -> chọn ổ đĩa -> tiến hành Flash.
       - Sau khi Flash, rút thẻ nhớ và cắm vào Orange PI
-BƯỚC 2: Dò địa chỉ IP của Orange PI (Lưu ý: Nhớ địa chỉ MAC)
+2. Dò địa chỉ IP của Orange PI (Lưu ý: Nhớ địa chỉ MAC):
       - Cắm nguồn, dây mạng cho Pi và đợi Pi khởi động.
       - Để ý 2 led trên cổng LAN nhấp nháy là đã nhận mạng, sau đó tắt.
       - Dùng phần mềm Advanced IP Scanner để SCAN tìm IP của Orange PI (*Ảnh minh họa)
