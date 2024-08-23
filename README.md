@@ -7,13 +7,19 @@
 5. Một dây cáp LAN để cấu hình wifi cho Orange PI.
 
 ***********************Phần mềm cẩn chuẩn bị:***********************
-1. Phần mền ghi thẻ nhớ, mình dùng: balenaEtcher (dành cho Win).
-   Tải ở link sau: https://balenaetcher.en.download.it
+1. Phần mền ghi thẻ nhớ, mình dùng: balenaEtcher (dành cho Win, source code hỗ trợ cả Mac).
+   - Dùng để ghi tệp ảnh phần mềm vào thẻ nhớ.
+   - Tải ở link sau: https://balenaetcher.en.download.it
 2. Phần mềm dò địa chỉ IP mạng, mình dùng: Advanced IP Scanner (dành cho Win).
-   Tải ở link sau: https://www.advanced-ip-scanner.com/vi/   
+   (Hoặc các bạn có thể dùng phần mềm dò IP bằng điện thoại cũng đều được)
+   - Dùng để tìm địa chỉ IP của Orange Pi để có thể dùng công cụ SSH để điều khiển từ xa.
+   - LƯU Ý: Các bạn nhớ giúp mình số MAC của pi, vì số này sẽ không thay đổi khi các bạn tìm IP.
+   - Tải ở link sau: https://www.advanced-ip-scanner.com/vi/   
+4. Phần mềm MobaXterm (hỗ trợ nhiều giao thức điều khiển không dây, VD: VNC, SSH,...)
+   - 
 
 *****************************Tiến hành:*****************************
 BƯỚC 1: Cài đặt hệ điều hành cho Pi
-      - Vào trang sau: https://www.armbian.com/orange-pi-zero/  để tải hệ điều hành cho Orange Pi
-      - Vì Orange Pi Zero ko có bản desktop nên bạn có thể tùy chọn tải về Ubuntu hoặc Debian 
-      - Sau khi tải về, bạn sẽ có một file ảnh đuôi 
+      - Vào trang sau: https://www.armbian.com/orange-pi-zero/  để tải hệ điều hành cho Orange Pi.
+      - Vì Orange Pi Zero ko có bản desktop nên bạn có thể tùy chọn tải về Ubuntu hoặc Debian. 
+      - Sau khi tải về, giải nén ra, có 1 file dạng đuôi .img. Đây chính là file ảnh của hệ điều hành.
