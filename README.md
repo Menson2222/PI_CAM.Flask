@@ -36,4 +36,8 @@
 3. Tiến hành SSH vào Orange Pi bằng MobaXterm:
       - Mở MobaXterm, chọn Start local Terinal. 
       ![image](https://github.com/user-attachments/assets/392dafa7-eb93-4d2c-a6c8-f39268bd596c)
-      - Dùng lệnh: 'ssh root@192.168.xxx.xxx' để 
+      - Dùng lệnh: `ssh root@192.168.xxx.xxx` để ssh vào PI (_Thay thế IP vào nhé!_)
+      - Sau khi SSH sẽ hiện ra ảnh sau:
+4. Cấu hình wifi cho Pi để Pi tự động kết nối lần sau mà không cần cáp mạng:
+      -  
+5. Tải các gói cài đặt cần thiết cho Orange Pi:
