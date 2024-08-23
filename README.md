@@ -30,6 +30,10 @@
 2. Dò địa chỉ IP của Orange PI (Lưu ý: Nhớ địa chỉ MAC):
       - Cắm nguồn, dây mạng cho Pi và đợi Pi khởi động.
       - Để ý 2 led trên cổng LAN nhấp nháy là đã nhận mạng, sau đó tắt.
-      - Dùng phần mềm Advanced IP Scanner để SCAN tìm IP của Orange PI (*Ảnh minh họa)
-      ![image](https://github.com/user-attachments/assets/f7e21b52-9f22-404a-9227-e6b895339c92)
-      - Sau khi check được IP và lưu lại địa chỉ MAC, tiến hành bước tiếp theo
+      - Dùng phần mềm Advanced IP Scanner để SCAN tìm IP của Orange PI (*Ảnh minh họa).
+      ![image](https://github.com/user-attachments/assets/d8357b0f-16eb-4946-a054-1f4a2f37e503)
+      - Sau khi check được IP ở thiết bị có tên "orangepizero" và lưu lại địa chỉ MAC, tiến hành bước tiếp theo.
+3. Tiến hành SSH vào Orange Pi bằng MobaXterm:
+      - Mở MobaXterm, chọn Start local Terinal. 
+      ![image](https://github.com/user-attachments/assets/392dafa7-eb93-4d2c-a6c8-f39268bd596c)
+      - Dùng lệnh: *ssh root@192.168.xxx.xxx* để 
