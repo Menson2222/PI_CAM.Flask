@@ -1,12 +1,12 @@
 # PI_CAM.Flask
-***********************Phần cứng cần chuẩn bị:***********************
+##Phần cứng cần chuẩn bị:
 1. Orange Pi Zero hoặc các mẫu Raspberry Pi Zero (Ở đây mình dùng Orange PI Zero).
 2. Webcam USB hoặc các camera mà mẫu pi bạn hỗ trợ (Ở đây mình dùng webcam USB).
 3. Một thẻ nhớ tối thiểu 8GB (Nên chọn các thẻ có tốc đọc ghi nhanh).
 4. Một bộ nguồn 5VDC tối thiếu 2A.
 5. Một dây cáp LAN để cấu hình wifi cho Orange PI.
 
-***********************Phần mềm cẩn chuẩn bị:***********************
+##Phần mềm cẩn chuẩn bị:
 1. Phần mền ghi thẻ nhớ, mình dùng: balenaEtcher (dành cho Win, source code hỗ trợ cả Mac):
    - Dùng để ghi tệp ảnh phần mềm vào thẻ nhớ.
    - Tải ở link sau: https://balenaetcher.en.download.it
@@ -19,8 +19,7 @@
    _(Hoặc các bạn có thể dùng Windows PowerShell chạy với quyền quản trị viên cho tiện)_
    - Sử dụng công cụ SSh để điều khiển PI, đồng thời cũng hỗ trợ chuyển tệp, xóa tệp một các dễ dàng.
    - Tải ở link sau: https://mobaxterm.mobatek.net
-   
-*****************************Tiến hành:*****************************
+##Tiến hành:
 1. Cài đặt hệ điều hành cho Orange Pi:
       - Vào trang sau: https://www.armbian.com/orange-pi-zero/  để tải hệ điều hành cho Orange Pi.
       - Vì Orange Pi Zero ko có bản desktop nên bạn có thể tùy chọn tải về Ubuntu hoặc Debian. 
