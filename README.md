@@ -42,9 +42,9 @@ Stream Camera Orange Pi bằng Flash trên Era kết hợp với OpenCV để gi
       ![image](https://github.com/user-attachments/assets/305276e3-2f5d-48e9-91de-61a4945d7aff)
 4. Cấu hình wifi cho Pi để Pi tự động kết nối lần sau mà không cần cáp mạng:
    (_Nếu hệ điều hành của bạn hỗ trợ Network Manager, cách đơn giản nhất là sử dụng nmtui_)
-      - Cài đặt nmtui (nếu chưa có): `sudo apt-get install network-manager`
-      - Mở nmtui bằng: `sudo nmtui`
-      - Chọn: `Edit a connection`
+      - Cài đặt nmtui (nếu chưa có): ```sudo apt-get install network-manager```
+      - Mở nmtui bằng: ```sudo nmtui```
+      - Chọn: ```Edit a connection```
       - Sau đó chọn wifi nhập pass và 'back' về màn hình ban đầu.
       ![image](https://github.com/user-attachments/assets/835db4f5-2472-4fec-a089-33771644a7a3)
 6. Tải các gói cài đặt cần thiết cho Orange Pi:
