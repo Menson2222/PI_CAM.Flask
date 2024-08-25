@@ -67,8 +67,6 @@ from flask import Flask, Response
 import cv2
 
 app = Flask(__name__)
-
-# Mở camera hoặc video file
 video_source = 0  # Thay đổi thành đường dẫn video file nếu cần
 cap = cv2.VideoCapture(video_source)
 
@@ -77,7 +75,6 @@ def generate():
         ret, frame = cap.read()
         if not ret:
             break
-        # Chuyển đổi khung hình thành JPEG và gửi qua stream
         _, buffer = cv2.imencode('.jpg', frame)
         frame = buffer.tobytes()
         yield (b'--frame\r\n'
@@ -89,7 +86,17 @@ def video_feed():
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)```
+    app.run(host='0.0.0.0', port=5000)
+```
+- Nhấn `Ctrl + X` để thoát và `Y` để lưu lại đoạn code.
+- Di chuyển đến nơi chứa thư mục bằng lệnh `cd`
+- Sử dụng lệnh `python3 ERAcam.py -i 192.168.xxx.xxx -p 5000 -s /dev/ttyUSB0` để chạy chương trình (thay thế cổng mà bạn chọn, IP là IP của Orange Pi)
+  ![image](https://github.com/user-attachments/assets/fdcae03d-c8aa-4ff6-85ce-e4bb8d606b19)
+- Cuối cùng, truy cập qua link:`http://192.168.xxx.xxx:5000/video_feed` để check xem video đã chạy được chưa. Dán URL vào WidgetCamera là đã hoàn thành.
+## Kết quả: 
+![z5764746841953_c22cf38d756c3f8909eea483ff2c632a](https://github.com/user-attachments/assets/d6524f09-3637-438c-8e5a-7cc3227e2240)
+![z5764766716116_319b872959a9b1561891ea3b5664693a](https://github.com/user-attachments/assets/b3c89ac7-960c-41fe-8686-4a6564050d93)
 
 # CẢM ƠN CÁC BẠN ĐÃ XEM, CHÚC CÁC BẠN THỰC HIỆN ĐƯỢC DỰ ÁN!
 ## Nếu có gì thắc mắc, vui lòng liên hệ Mess: https://www.facebook.com/profile.php?id=100076267646838&mibextid=ZbWKwL
+
