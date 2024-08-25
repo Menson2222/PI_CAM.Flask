@@ -42,8 +42,7 @@ Stream Camera Orange Pi bằng Flash trên Era kết hợp với OpenCV để gi
       ![image](https://github.com/user-attachments/assets/305276e3-2f5d-48e9-91de-61a4945d7aff)
 4. Cấu hình wifi cho Pi để Pi tự động kết nối lần sau mà không cần cáp mạng:
    (_Nếu hệ điều hành của bạn hỗ trợ Network Manager, cách đơn giản nhất là sử dụng nmtui_)
-      - Cài đặt nmtui (nếu chưa có):
-   ```sudo apt-get install network-manager```
+      - Cài đặt nmtui (nếu chưa có):```sudo apt-get install network-manager```
       - Mở nmtui bằng: ```sudo nmtui```
       - Chọn: ```Edit a connection```
       - Sau đó chọn wifi nhập pass và 'back' về màn hình ban đầu.
@@ -54,4 +53,43 @@ Stream Camera Orange Pi bằng Flash trên Era kết hợp với OpenCV để gi
       - Tải gói Pytho và các gói phụ thuộc: `sudo apt install python3-dev python3-pip python3-numpy` và kiểm tra bằng: `python3 --version`
       - Tải xuống OpenCV: `sudo apt install python3-opencv` và kiểm tra bằng cách nhập: `python3`, sau đó nhập `import cv2`
                                                                                                                 `print(cv2.__version__)`
-      - Tải xuống một số phụ thuộc: 
+      - Tải xuống một số phụ thuộc: `pip3 install --upgrade pip setuptools wheel`
+                                    `pip3 install flask pyserial `
+      - Sau khi hoàn tất tải các gói, bạn hãy cắm CameraUSB vào Orange Pi và check xem Orange pi đã nhận Camera hay chưa.
+6. Kiểm tra Camera USB:
+      - Sử dụng lệnh `v4l2-ctl --list-devices` để kiểm tra các thiết bị video. Nếu chưa, bạn có thể cài đặt nó bằng `sudo apt install v4l-utils`
+      - Kiểm tra kết quả đã nhận Camera chưa và tiến hành bước sau.
+7. Tạo file, chỉnh file và tiến hành chạy tệp tin:
+      - Tạo file bằng lệnh: `nano ERAcam.py`
+      - Dán đoạn code sau:
+```
+from flask import Flask, Response
+import cv2
+
+app = Flask(__name__)
+
+# Mở camera hoặc video file
+video_source = 0  # Thay đổi thành đường dẫn video file nếu cần
+cap = cv2.VideoCapture(video_source)
+
+def generate():
+    while True:
+        ret, frame = cap.read()
+        if not ret:
+            break
+        # Chuyển đổi khung hình thành JPEG và gửi qua stream
+        _, buffer = cv2.imencode('.jpg', frame)
+        frame = buffer.tobytes()
+        yield (b'--frame\r\n'
+               b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+
+@app.route('/video_feed')
+def video_feed():
+    return Response(generate(),
+                    mimetype='multipart/x-mixed-replace; boundary=frame')
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)```
+
+# CẢM ƠN CÁC BẠN ĐÃ XEM, CHÚC CÁC BẠN THỰC HIỆN ĐƯỢC DỰ ÁN!
+## Nếu có gì thắc mắc, vui lòng liên hệ Mess: https://www.facebook.com/profile.php?id=100076267646838&mibextid=ZbWKwL
