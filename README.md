@@ -38,5 +38,18 @@
       ![image](https://github.com/user-attachments/assets/392dafa7-eb93-4d2c-a6c8-f39268bd596c)
       - Dùng lệnh: `ssh root@192.168.xxx.xxx` để ssh vào PI (_Thay thế IP vào nhé!_)
       - Sau khi SSH sẽ hiện ra ảnh sau:
+      ![image](https://github.com/user-attachments/assets/305276e3-2f5d-48e9-91de-61a4945d7aff)
 4. Cấu hình wifi cho Pi để Pi tự động kết nối lần sau mà không cần cáp mạng:
+   (_Nếu hệ điều hành của bạn hỗ trợ Network Manager, cách đơn giản nhất là sử dụng nmtui_)
+      - Cài đặt nmtui (nếu chưa có): `sudo apt-get install network-manager`
+      - Mở nmtui bằng: `sudo nmtui`
+      - Chọn: `Edit a connection`
+      - Sau đó chọn wifi nhập pass và 'back' về màn hình ban đầu.
+      ![image](https://github.com/user-attachments/assets/835db4f5-2472-4fec-a089-33771644a7a3)
 6. Tải các gói cài đặt cần thiết cho Orange Pi:
+      - Gói cập nhật: `sudo apt update
+                       sudo apt upgrade`
+      - Tải gói Pytho và các gói phụ thuộc: `sudo apt install python3-dev python3-pip python3-numpy` và kiểm tra bằng: `python3 --version`
+      - Tải xuống OpenCV: `sudo apt install python3-opencv` và kiểm tra bằng cách nhập: `python3`, sau đó nhập `import cv2
+                                                                                                                print(cv2.__version__)`
+      - Tải xuống một số phụ thuộc: 
