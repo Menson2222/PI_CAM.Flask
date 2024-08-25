@@ -47,9 +47,9 @@
       - Sau đó chọn wifi nhập pass và 'back' về màn hình ban đầu.
       ![image](https://github.com/user-attachments/assets/835db4f5-2472-4fec-a089-33771644a7a3)
 6. Tải các gói cài đặt cần thiết cho Orange Pi:
-      - Gói cập nhật: `sudo apt update
-                       sudo apt upgrade`
+      - Gói cập nhật: `sudo apt update`
+                       `sudo apt upgrade`
       - Tải gói Pytho và các gói phụ thuộc: `sudo apt install python3-dev python3-pip python3-numpy` và kiểm tra bằng: `python3 --version`
-      - Tải xuống OpenCV: `sudo apt install python3-opencv` và kiểm tra bằng cách nhập: `python3`, sau đó nhập `import cv2
-                                                                                                                print(cv2.__version__)`
+      - Tải xuống OpenCV: `sudo apt install python3-opencv` và kiểm tra bằng cách nhập: `python3`, sau đó nhập `import cv2`
+                                                                                                                `print(cv2.__version__)`
       - Tải xuống một số phụ thuộc: 
