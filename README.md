@@ -1,5 +1,5 @@
 # PI_CAM.Flask
-## Lưu ý: Bài viết của mình chỉ hướng dẫn ứng dụng trên app, bài viết trên Web mình sẽ chia sẽ sau nhé!
+## Lưu ý: Bài viết của mình chỉ hướng dẫn ứng dụng trên app!
 Stream Camera Orange Pi bằng Flash trên Era kết hợp với OpenCV để giám sát trên Mobile Phhone 
 ***
 ## Phần cứng cần chuẩn bị:
